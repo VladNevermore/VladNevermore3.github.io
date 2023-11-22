@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кальянная</title>
+    <style>
+        /* Добавьте стили для красивого отображения */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #444;
+        }
+        section {
+            padding: 20px;
+        }
+        /* Дополнительные стили для карточек сотрудников */
+        .employee-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в кальянную</h1>
+        <img src="VladNevermore3.github.io/photo1.jpg" alt="Кальянная">
+    </header>
+
+    <nav>
+        <button onclick="showInfo()">Общая информация</button>
+        <button onclick="showEmployees()">Сотрудники</button>
+        <button onclick="showPromotions()">Акции</button>
+        <button onclick="showMenu()">Меню</button>
+        <button onclick="showReservation()">Бронирование</button>
+    </nav>
+
+    <section id="infoSection" style="display: none;">
+        <h2>Общая информация</h2>
+        <p>Краткая информация о кальянной...</p>
+        <img src="calyx_images.jpg" alt="Кальянная">
+        <p>Время работы: Пн-Вс 12:00 - 23:00</p>
+        <!-- Добавьте карту с геолокацией -->
+        <p>Адрес: ул. Улица, дом 123</p>
+    </section>
+
+    <section id="employeesSection" style="display: none;">
+        <h2>Сотрудники</h2>
+        <!-- Добавьте карточки сотрудников -->
+        <div class="employee-card">
+            <img src="employee1.jpg" alt="Сотрудник 1">
+            <p>Должность: ...</p>
+            <p>Цитата: ...</p>
+        </div>
+        <!-- Добавьте другие карточки по аналогии -->
+    </section>
+
+    <section id="promotionsSection" style="display: none;">
+        <h2>Акции</h2>
+        <img src="promotion_image.jpg" alt="Акция">
+        <p>Текст акции...</p>
+    </section>
+
+    <section id="menuSection" style="display: none;">
+        <h2>Меню</h2>
+        <!-- Добавьте блоки с вкусами кальяна -->
+        <div>
+            <img src="flavor1.jpg" alt="Вкус 1">
+            <p>Название: ...</p>
+            <p>Цена: ...</p>
+        </div>
+        <!-- Добавьте другие блоки по аналогии -->
+    </section>
+
+    <section id="reservationSection" style="display: none;">
+        <h2>Бронирование</h2>
+        <form>
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="comment">Комментарий:</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+
+            <button type="submit">Забронировать</button>
+        </form>
+    </section>
+
+    <script>
+        function showInfo() {
+            hideAllSections();
+            document.getElementById("infoSection").style.display = "block";
+        }
+
+        function showEmployees() {
+            hideAllSections();
+            document.getElementById("employeesSection").style.display = "block";
+        }
+
+        function showPromotions() {
+            hideAllSections();
+            document.getElementById("promotionsSection").style.display = "block";
+        }
+
+        function showMenu() {
+            hideAllSections();
+            document.getElementById("menuSection").style.display = "block";
+        }
+
+        function showReservation() {
+            hideAllSections();
+            document.getElementById("reservationSection").style.display = "block";
+        }
+
+        function hideAllSections() {
+            document.getElementById("infoSection").style.display = "none";
+            document.getElementById("employeesSection").style.display = "none";
+            document.getElementById("promotionsSection").style.display = "none";
+            document.getElementById("menuSection").style.display = "none";
+            document.getElementById("reservationSection").style.display = "none";
+        }
+    </script>
+</body>
+</html>
